@@ -4,9 +4,10 @@ var hours = fullDate.getHours();
 var minutes =fullDate.getMinutes();
 var seconds = fullDate.getSeconds();
 
-var day = fullDate.getDay();
+var day = fullDate.getDate();
 var month= fullDate.getMonth();
 var year = fullDate.getFullYear();
+
 
 if (hours < 10) {
     hours = "0" + hours;
@@ -32,7 +33,7 @@ document.getElementById('hour').innerHTML = hours;
 document.getElementById('minute').innerHTML = ":" + minutes;
 document.getElementById('second').innerHTML = ":" + seconds;
 
-document.getElementById('month').innerHTML = month;
+document.getElementById('month').innerHTML = month + 1;
 document.getElementById('day').innerHTML = "/" + day;
 document.getElementById('year').innerHTML = "/" + year;
 
