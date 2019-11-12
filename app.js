@@ -1,3 +1,5 @@
+
+
 function clock (){
     var fullDate = new Date ();
     var hours = fullDate.getHours();
@@ -5,8 +7,9 @@ function clock (){
     var seconds = fullDate.getSeconds();
     var day = fullDate.getDate();
     var month= fullDate.getMonth();
-    var year = fullDate.getFullYear();
-    
+    var year = fullDate.getFullYear();  
+      
+      
     if (hours < 10) {
         hours = "0" + hours;
     }
@@ -39,13 +42,18 @@ function clock (){
     document.getElementById('day').innerHTML = "/" + day;
     document.getElementById('year').innerHTML = "/" + year;
     
-      var timeButton = document.getElementById('myButton').addEventListener("click", function(){
-            if (hours > 12){
-                return hours - 12;
-        }  
-        
-    });
     }
+
+    var hours = document.getElementById('hour')
+
+    var timeButton = document.getElementById('myButton')
+        timeButton.addEventListener("click", function(){
+            if (hours > 12){
+             hours = hours - 12;
+           }
+           
+      });
     
-    setInterval(clock, 1000); 
-  
+        
+     setInterval(clock, 1000); 
+    
