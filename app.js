@@ -30,25 +30,30 @@ function clock (){
         day = "0" + day;
     }
     
-    if (!is24hr && hours > 12) {
+    if (is24hr == false && hours > 12) {
         hours = hours - 12;
     }
 
-    document.getElementById('hour').innerHTML = hours;
-    document.getElementById('minute').innerHTML = ":" + minutes;
-    document.getElementById('second').innerHTML = ":" + seconds;
+document.getElementById('hour').innerHTML = hours;
+document.getElementById('minute').innerHTML = ":" + minutes;
+document.getElementById('second').innerHTML = ":" + seconds;
     
-    document.getElementById('month').innerHTML = month + 1;
-    document.getElementById('day').innerHTML = "/" + day;
-    document.getElementById('year').innerHTML = "/" + year;
+document.getElementById('month').innerHTML = month + 1;
+document.getElementById('day').innerHTML = "/" + day;
+document.getElementById('year').innerHTML = "/" + year;
     
-    }
-    var timeButton = document.getElementById('myButton');
-    var is24hr = true;
-    timeButton.addEventListener("click", function() {
+}
+var is24hr = true;
+var timeButton = document.getElementById('myButton');
+timeButton.addEventListener("click", function() {
         is24hr = !is24hr;
-    });
+        //if (is24hr == true){
+          //  is24hr = false
+          //} else {
+            //is24hr = true
+          //}   
+});
 
   
-     setInterval(clock, 1000); 
+setInterval(clock, 1000); 
     
